@@ -1,0 +1,119 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 30px;
+  color: #333;
+}
+
+#dice-game-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input[type="number"] {
+  font-size: 1.2rem;
+  width: 80px;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#error-message {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dice-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.dice {
+  width: 80px;
+  transition: transform 0.5s;
+}
+
+.roll-animation {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(-20px) rotate(0deg); }
+  50% { transform: translateY(0) rotate(90deg); }
+  100% { transform: translateY(-10px) rotate(180deg); }
+}
+
+#diceResult, #diceTotal {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+#history {
+  margin-top: 30px;
+  text-align: left;
+}
+
+#history h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+#historyList {
+  list-style: none;
+  padding-left: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#historyList li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 4px;
+}
